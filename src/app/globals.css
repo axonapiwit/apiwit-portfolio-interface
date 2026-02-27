@@ -1,32 +1,133 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --background: 27 27 27;
-    --foreground: 225 225 225;
-    --muted: 115 115 115;
-    --accent: 254 254 91;
-    /* hex value of rgb(254,254,91) color is  #FEFE5B  */
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-elevated: #1a1a1a;
+  --accent: #ff2d2d;
+  --accent-dim: #cc0000;
+  --accent-glow: rgba(255, 45, 45, 0.15);
+  --text-primary: #ededed;
+  --text-secondary: #888888;
+  --text-dim: #555555;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-accent: rgba(255, 45, 45, 0.3);
+}
+
+@theme inline {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-accent-glow: var(--accent-glow);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-dim: var(--text-dim);
+  --color-border-line: var(--border);
+  --color-border-accent: var(--border-accent);
+  --font-sans: var(--font-poppins), var(--font-kanit), sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+html {
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@layer utilities {
-  .pause {
-    animation-play-state: paused;
+@keyframes marquee {
+  from {
+    transform: translateX(0);
   }
-
-  .custom-bg {
-    @apply bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] shadow-glass-inset hover:shadow-glass-sm;
+  to {
+    transform: translateX(-50%);
   }
 }
 
-@keyframes move {
-  0% {
-    transform: translate(0, 0);
+@keyframes cyberGridScroll {
+  from {
+    background-position: 0 0;
   }
+  to {
+    background-position: 0 80px;
+  }
+}
+
+@keyframes cyberDataFlow {
+  from {
+    transform: translateY(-15vh);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes cyberFlicker {
+  0%,
   100% {
-    transform: translate(100px, 100px);
+    opacity: 1;
   }
+  41% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.6;
+  }
+  43% {
+    opacity: 1;
+  }
+  44% {
+    opacity: 0.4;
+  }
+  45% {
+    opacity: 1;
+  }
+}
+
+.cyber-clip {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 14px) 0,
+    100% 14px,
+    100% 100%,
+    14px 100%,
+    0 calc(100% - 14px)
+  );
+}
+
+.cyber-clip-sm {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 8px) 0,
+    100% 8px,
+    100% 100%,
+    8px 100%,
+    0 calc(100% - 8px)
+  );
 }
