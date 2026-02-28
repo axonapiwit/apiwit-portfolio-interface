@@ -24,8 +24,8 @@
     "live": "เว็บ",
     "code": "โค้ด",
     "items": {
-      "portfolio-v2": {
-        "title": "Portfolio V2",
+      "portfolio": {
+        "title": "Portfolio",
         "description": "เว็บ Portfolio สไตล์ไซเบอร์พังค์ พร้อมแอนิเมชัน GSAP และ Boot Screen"
       },
       "ecommerce-dashboard": {
