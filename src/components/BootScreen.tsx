@@ -1,19 +1,12 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 import gsap from "gsap";
 
 interface BootScreenProps {
   onComplete: () => void;
 }
-
-const BOOT_LOGS = [
-  "loading kernel modules...",
-  "mounting /dev/portfolio...",
-  "initializing GPU pipeline...",
-  "compiling shaders...",
-  "establishing neural link...",
-];
 
 const PROGRESS_STEPS = [
   { to: 28, duration: 0.6, ease: "power1.out" },
@@ -24,6 +17,8 @@ const PROGRESS_STEPS = [
 ];
 
 export default function BootScreen({ onComplete }: BootScreenProps) {
+  const t = useTranslations("boot");
+  const bootLogs = PROGRESS_STEPS.map((_, i) => t(`logs.${i}`));
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
@@ -98,12 +93,12 @@ export default function BootScreen({ onComplete }: BootScreenProps) {
         ease: step.ease,
         onUpdate: () => updateBar(Math.round(counter.val)),
         onStart: () => {
-          if (i < BOOT_LOGS.length) appendLog(BOOT_LOGS[i]);
+          if (i < bootLogs.length) appendLog(bootLogs[i]);
         },
       });
     });
 
-    tl.call(() => appendLog("system ready.", true));
+    tl.call(() => appendLog(t("ready"), true));
     tl.to({}, { duration: 0.6 });
 
     return () => {

@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "about": "เกี่ยวกับ",
+    "projects": "ผลงาน",
+    "experience": "ประสบการณ์",
+    "contact": "ติดต่อ"
+  },
+  "hero": {
+    "subtitle": "นักพัฒนา Frontend / Creative Coder",
+    "cta": "ดูผลงาน",
+    "marquee": "FRONTEND DEVELOPER ■ CREATIVE CODER ■ REACT ■ NEXT.JS ■ TYPESCRIPT ■ GSAP ■"
+  },
+  "about": {
+    "label": "เกี่ยวกับ",
+    "title": "ตัวตน",
+    "bio1": "สวัสดีครับ ผม Apiwit — นักพัฒนา Frontend ที่หลงใหลในการสร้าง web experience ที่สวยงามและ interactive",
+    "bio2": "ผมชอบผสมผสาน creative coding เข้ากับ modern frontend frameworks เพื่อสร้างเว็บที่ไม่ใช่แค่ใช้งานได้ แต่ต้อง \"ว้าว\" ด้วย",
+    "techLabel": "TECH_STACK:"
+  },
+  "projects": {
+    "label": "ผลงาน",
+    "title": "ผลงานคัดสรร",
+    "live": "เว็บ",
+    "code": "โค้ด",
+    "items": {
+      "portfolio-v2": {
+        "title": "Portfolio V2",
+        "description": "เว็บ Portfolio สไตล์ไซเบอร์พังค์ พร้อมแอนิเมชัน GSAP และ Boot Screen"
+      },
+      "ecommerce-dashboard": {
+        "title": "แดชบอร์ด E-Commerce",
+        "description": "แดชบอร์ดผู้ดูแลพร้อม analytics แบบเรียลไทม์ จัดการออเดอร์ และติดตามสินค้าคงคลัง"
+      },
+      "chat-app": {
+        "title": "แชทเรียลไทม์",
+        "description": "แอปแชทผ่าน WebSocket พร้อมแสดงสถานะกำลังพิมพ์และรีแอคชันข้อความ"
+      },
+      "design-system": {
+        "title": "คลัง Component",
+        "description": "คลัง UI Component ที่ใช้ซ้ำได้ พร้อมเอกสาร Storybook และ Accessibility"
+      },
+      "weather-app": {
+        "title": "Weather Visualizer",
+        "description": "แอปพยากรณ์อากาศแบบ interactive พร้อมแผนที่และพยากรณ์ล่วงหน้า 7 วัน"
+      },
+      "blog-platform": {
+        "title": "แพลตฟอร์มบล็อก",
+        "description": "บล็อกขับเคลื่อนด้วย MDX พร้อม syntax highlighting, ค้นหา และ dark mode"
+      }
+    }
+  },
+  "experience": {
+    "label": "ประสบการณ์",
+    "title": "บันทึกระบบ",
+    "statusActive": "ทำงานอยู่",
+    "statusCompleted": "เสร็จสิ้น",
+    "items": {
+      "exp-1": {
+        "role": "Senior Frontend Developer",
+        "company": "Tech Company",
+        "description": "นำทีมสถาปัตยกรรม Frontend และสร้าง Design System สำหรับผลิตภัณฑ์ระดับองค์กร"
+      },
+      "exp-2": {
+        "role": "Frontend Developer",
+        "company": "Digital Agency",
+        "description": "พัฒนา web experience แบบ interactive และแคมเปญสร้างสรรค์ให้แบรนด์ระดับโลก"
+      },
+      "exp-3": {
+        "role": "Junior Developer",
+        "company": "Startup Inc.",
+        "description": "สร้างเว็บแอป responsive และเชื่อมต่อ REST API สำหรับแพลตฟอร์ม SaaS"
+      }
+    }
+  },
+  "contact": {
+    "label": "ติดต่อ",
+    "title": "ส่งข้อความ",
+    "nameLabel": "ชื่อ:",
+    "namePlaceholder": "ชื่อของคุณ",
+    "emailLabel": "อีเมล:",
+    "emailPlaceholder": "you@example.com",
+    "messageLabel": "ข้อความ:",
+    "messagePlaceholder": "สวัสดี...",
+    "required": "จำเป็น",
+    "emailInvalid": "กรุณากรอกอีเมลที่ถูกต้อง",
+    "submit": "ส่งข้อความ",
+    "sending": "กำลังส่ง",
+    "successToast": "ส่งข้อความสำเร็จแล้ว",
+    "errorToast": "ส่งไม่สำเร็จ กรุณาลองอีกครั้ง"
+  },
+  "footer": {
+    "endOfFile": "— จบไฟล์ —",
+    "copyright": "© 2026 APIWIT.EXE | สงวนลิขสิทธิ์"
+  },
+  "boot": {
+    "logs": {
+      "0": "กำลังโหลดโมดูลระบบ...",
+      "1": "กำลังเมาท์ /dev/portfolio...",
+      "2": "กำลังเตรียม GPU pipeline...",
+      "3": "กำลังคอมไพล์ shaders...",
+      "4": "กำลังเชื่อมต่อระบบประสาท..."
+    },
+    "ready": "ระบบพร้อมใช้งาน"
+  },
+  "terminal": {
+    "title": "APIWIT.EXE — เทอร์มินัล",
+    "welcome": "ยินดีต้อนรับสู่เทอร์มินัล APIWIT.EXE พิมพ์ \"help\" เพื่อดูคำสั่ง",
+    "placeholder": "พิมพ์คำสั่ง...",
+    "notFound": "ไม่พบคำสั่ง: {cmd} พิมพ์ \"help\" เพื่อดูคำสั่งทั้งหมด",
+    "commands": {
+      "help": "คำสั่งที่ใช้ได้: help, about, skills, secret, clear, exit",
+      "about": "APIWIT.EXE v2.0 — นักพัฒนา Frontend & Creative Coder\nอยู่ประเทศไทย ชอบ React, แอนิเมชัน และ dark theme",
+      "skills": "▓▓▓▓▓▓▓▓▓░ React 90%\n▓▓▓▓▓▓▓▓░░ TypeScript 80%\n▓▓▓▓▓▓▓▓▓░ Next.js 90%\n▓▓▓▓▓▓▓░░░ GSAP 70%\n▓▓▓▓▓▓▓▓░░ Tailwind 80%",
+      "secret": "ตรวจพบรหัส Konami... ล้อเล่น\nแต่เฮ้ คุณเจอเทอร์มินัลแล้ว! +100 คะแนน nerd",
+      "sudo hire me": "อนุมัติการเข้าถึง กำลังส่ง resume ไปยังกล่องจดหมายของคุณ... ✓",
+      "matrix": "ตื่นได้แล้ว Neo... The Matrix ตามหาคุณอยู่\nตามกระต่ายขาวไป",
+      "hello": "สวัสดีชาวโลก! ยินดีต้อนรับสู่เทอร์มินัล APIWIT.EXE"
+    }
+  },
+  "sound": {
+    "mute": "ปิดเสียง",
+    "enable": "เปิดเสียง",
+    "on": "เสียง เปิด",
+    "off": "เสียง ปิด"
+  }
+}

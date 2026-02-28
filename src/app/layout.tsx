@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins, Kanit } from "next/font/google";
 import { Toaster } from "sonner";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
 import CyberpunkScrollbar from "@/components/CyberpunkScrollbar";
 import "./globals.css";
 
@@ -44,15 +46,20 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="en" className="dark">
+    <html lang={locale} className="dark">
       <body className={`${poppins.variable} ${kanit.variable} antialiased`}>
-        {children}
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
         <CyberpunkScrollbar />
         <Toaster
           theme="dark"

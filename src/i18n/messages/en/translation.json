@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "about": "ABOUT",
+    "projects": "PROJECTS",
+    "experience": "EXPERIENCE",
+    "contact": "CONTACT"
+  },
+  "hero": {
+    "subtitle": "Frontend Developer / Creative Coder",
+    "cta": "VIEW PROJECTS",
+    "marquee": "FRONTEND DEVELOPER ■ CREATIVE CODER ■ REACT ■ NEXT.JS ■ TYPESCRIPT ■ GSAP ■"
+  },
+  "about": {
+    "label": "ABOUT",
+    "title": "Identity",
+    "bio1": "Hi, I'm Apiwit — a Frontend Developer passionate about crafting beautiful and interactive web experiences.",
+    "bio2": "I love blending creative coding with modern frontend frameworks to build websites that don't just work — they wow.",
+    "techLabel": "TECH_STACK:"
+  },
+  "projects": {
+    "label": "PROJECTS",
+    "title": "Selected Works",
+    "live": "LIVE",
+    "code": "CODE",
+    "items": {
+      "portfolio-v2": {
+        "title": "Portfolio V2",
+        "description": "Personal portfolio with cyberpunk aesthetic, GSAP animations and boot screen sequence."
+      },
+      "ecommerce-dashboard": {
+        "title": "E-Commerce Dashboard",
+        "description": "Admin dashboard with real-time analytics, order management and inventory tracking."
+      },
+      "chat-app": {
+        "title": "Real-time Chat",
+        "description": "WebSocket-based chat application with typing indicators and message reactions."
+      },
+      "design-system": {
+        "title": "Component Library",
+        "description": "Reusable UI component library with Storybook documentation and accessibility."
+      },
+      "weather-app": {
+        "title": "Weather Visualizer",
+        "description": "Interactive weather app with map visualization and 7-day forecast."
+      },
+      "blog-platform": {
+        "title": "Blog Platform",
+        "description": "MDX-powered blog with syntax highlighting, search and dark mode."
+      }
+    }
+  },
+  "experience": {
+    "label": "EXPERIENCE",
+    "title": "System Log",
+    "statusActive": "ACTIVE",
+    "statusCompleted": "COMPLETED",
+    "items": {
+      "exp-1": {
+        "role": "Senior Frontend Developer",
+        "company": "Tech Company",
+        "description": "Leading frontend architecture and building design system for enterprise products."
+      },
+      "exp-2": {
+        "role": "Frontend Developer",
+        "company": "Digital Agency",
+        "description": "Developed interactive web experiences and creative campaigns for global brands."
+      },
+      "exp-3": {
+        "role": "Junior Developer",
+        "company": "Startup Inc.",
+        "description": "Built responsive web applications and integrated REST APIs for SaaS platform."
+      }
+    }
+  },
+  "contact": {
+    "label": "CONTACT",
+    "title": "Send Message",
+    "nameLabel": "name:",
+    "namePlaceholder": "John Doe",
+    "emailLabel": "email:",
+    "emailPlaceholder": "john@example.com",
+    "messageLabel": "message:",
+    "messagePlaceholder": "Hello...",
+    "required": "required",
+    "emailInvalid": "valid email required",
+    "submit": "SEND_MESSAGE",
+    "sending": "SENDING",
+    "successToast": "Message sent successfully.",
+    "errorToast": "Transmission failed. Try again."
+  },
+  "footer": {
+    "endOfFile": "— END OF FILE —",
+    "copyright": "© 2026 APIWIT.EXE | All rights reserved"
+  },
+  "boot": {
+    "logs": {
+      "0": "loading kernel modules...",
+      "1": "mounting /dev/portfolio...",
+      "2": "initializing GPU pipeline...",
+      "3": "compiling shaders...",
+      "4": "establishing neural link..."
+    },
+    "ready": "system ready."
+  },
+  "terminal": {
+    "title": "APIWIT.EXE — Terminal",
+    "welcome": "Welcome to APIWIT.EXE terminal. Type \"help\" for commands.",
+    "placeholder": "type a command...",
+    "notFound": "Command not found: {cmd}. Type \"help\" for available commands.",
+    "commands": {
+      "help": "Available commands: help, about, skills, secret, clear, exit",
+      "about": "APIWIT.EXE v2.0 — Frontend Developer & Creative Coder\nBased in Thailand. Loves React, animations, and dark themes.",
+      "skills": "▓▓▓▓▓▓▓▓▓░ React 90%\n▓▓▓▓▓▓▓▓░░ TypeScript 80%\n▓▓▓▓▓▓▓▓▓░ Next.js 90%\n▓▓▓▓▓▓▓░░░ GSAP 70%\n▓▓▓▓▓▓▓▓░░ Tailwind 80%",
+      "secret": "Konami code detected... just kidding.\nBut hey, you found the terminal! +100 nerd points.",
+      "sudo hire me": "ACCESS GRANTED. Sending resume to your inbox... ✓",
+      "matrix": "Wake up, Neo... The Matrix has you.\nFollow the white rabbit.",
+      "hello": "Hello, World! Welcome to APIWIT.EXE terminal."
+    }
+  },
+  "sound": {
+    "mute": "Mute sounds",
+    "enable": "Enable sounds",
+    "on": "Sound ON",
+    "off": "Sound OFF"
+  }
+}

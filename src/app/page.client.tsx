@@ -43,10 +43,10 @@ export default function HomeClient() {
         aria-hidden={!booted}
       >
         <HeroSection active={booted} />
-          <AboutSection />
-          <ProjectsSection />
-          <ExperienceSection />
-          <ContactSection />
+        <AboutSection />
+        <ProjectsSection />
+        <ExperienceSection />
+        <ContactSection />
         <Footer />
       </main>
     </>

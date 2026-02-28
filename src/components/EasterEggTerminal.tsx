@@ -4,9 +4,12 @@ import { useEffect, useRef, useState, useCallback } from "react";
 
 const COMMANDS: Record<string, string> = {
   help: "Available commands: help, about, skills, secret, clear, exit",
-  about: "APIWIT.EXE v2.0 — Frontend Developer & Creative Coder\nBased in Thailand. Loves React, animations, and dark themes.",
-  skills: "▓▓▓▓▓▓▓▓▓░ React 90%\n▓▓▓▓▓▓▓▓░░ TypeScript 80%\n▓▓▓▓▓▓▓▓▓░ Next.js 90%\n▓▓▓▓▓▓▓░░░ GSAP 70%\n▓▓▓▓▓▓▓▓░░ Tailwind 80%",
-  secret: "🎮 Konami code detected... just kidding.\nBut hey, you found the terminal! +100 nerd points.",
+  about:
+    "APIWIT.EXE v2.0 — Frontend Developer & Creative Coder\nBased in Thailand. Loves React, animations, and dark themes.",
+  skills:
+    "▓▓▓▓▓▓▓▓▓░ React 90%\n▓▓▓▓▓▓▓▓░░ TypeScript 80%\n▓▓▓▓▓▓▓▓▓░ Next.js 90%\n▓▓▓▓▓▓▓░░░ GSAP 70%\n▓▓▓▓▓▓▓▓░░ Tailwind 80%",
+  secret:
+    "🎮 Konami code detected... just kidding.\nBut hey, you found the terminal! +100 nerd points.",
   "sudo hire me": "ACCESS GRANTED. Sending resume to your inbox... ✓",
   matrix: "Wake up, Neo... The Matrix has you.\nFollow the white rabbit. 🐇",
   hello: "Hello, World! Welcome to APIWIT.EXE terminal.",
@@ -25,7 +28,8 @@ export default function EasterEggTerminal() {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       keysRef.current += e.key;
-      if (keysRef.current.length > 10) keysRef.current = keysRef.current.slice(-10);
+      if (keysRef.current.length > 10)
+        keysRef.current = keysRef.current.slice(-10);
       if (keysRef.current.endsWith(triggerSequence)) {
         setOpen((prev) => !prev);
         keysRef.current = "";
@@ -53,7 +57,9 @@ export default function EasterEggTerminal() {
       setOpen(false);
       return;
     }
-    const output = COMMANDS[trimmed] ?? `Command not found: ${trimmed}. Type "help" for available commands.`;
+    const output =
+      COMMANDS[trimmed] ??
+      `Command not found: ${trimmed}. Type "help" for available commands.`;
     setHistory((prev) => [...prev, { cmd, output }]);
   }, []);
 
@@ -63,7 +69,9 @@ export default function EasterEggTerminal() {
     <div className="fixed inset-x-0 bottom-0 z-[200] mx-auto w-full max-w-2xl p-4">
       <div className="overflow-hidden border border-border-accent bg-bg-primary/95 shadow-[0_0_30px_var(--accent-glow)] backdrop-blur-md">
         <div className="flex items-center justify-between border-b border-border-line px-4 py-2">
-          <span className="font-mono text-xs text-accent">APIWIT.EXE — Terminal</span>
+          <span className="font-mono text-xs text-accent">
+            APIWIT.EXE — Terminal
+          </span>
           <button
             onClick={() => setOpen(false)}
             className="font-mono text-xs text-text-dim transition-colors hover:text-accent"

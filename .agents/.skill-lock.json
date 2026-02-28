@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "skills": {
+    "gsap": {
+      "source": "noklip-io/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/noklip-io/agent-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-02-28T07:41:34.954Z",
+      "updatedAt": "2026-02-28T07:41:34.954Z"
+    }
+  },
+  "dismissed": {}
+}

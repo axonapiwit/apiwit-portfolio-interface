@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import GlitchText from "./GlitchText";
 import Marquee from "./Marquee";
 import ScrollIndicator from "./ScrollIndicator";
@@ -11,6 +12,8 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ active = true }: HeroSectionProps) {
+  const t = useTranslations("hero");
+
   return (
     <section
       id="hero"
@@ -29,7 +32,7 @@ export default function HeroSection({ active = true }: HeroSectionProps) {
               delay={0.2}
             />
             <p className="animate-[fadeIn_0.5s_ease_0.8s_both] text-lg text-text-secondary md:text-xl">
-              Frontend Developer / Creative Coder
+              {t("subtitle")}
             </p>
             <CyberButton
               href="#projects"
@@ -39,7 +42,7 @@ export default function HeroSection({ active = true }: HeroSectionProps) {
                 document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              VIEW PROJECTS
+              {t("cta")}
             </CyberButton>
           </>
         )}
@@ -47,7 +50,7 @@ export default function HeroSection({ active = true }: HeroSectionProps) {
 
       <div className="absolute inset-x-0 bottom-16 z-10">
         <Marquee>
-          FRONTEND DEVELOPER ■ CREATIVE CODER ■ REACT ■ NEXT.JS ■ TYPESCRIPT ■ GSAP ■
+          {t("marquee")}
         </Marquee>
       </div>
 

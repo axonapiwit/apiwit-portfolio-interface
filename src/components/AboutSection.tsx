@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import { useTranslations } from "next-intl";
 import HudFrame from "./HudFrame";
 import GlitchImage from "./GlitchImage";
 import useScrollReveal from "@/hooks/useScrollReveal";
@@ -23,6 +24,7 @@ const TECH_STACK = [
 ];
 
 export default function AboutSection() {
+  const t = useTranslations("about");
   const sectionRef = useRef<HTMLElement>(null);
   const avatarRef = useRef<HTMLDivElement>(null);
   const bioRef = useRef<HTMLDivElement>(null);
@@ -57,10 +59,10 @@ export default function AboutSection() {
     >
       <div className="mx-auto w-full max-w-6xl">
         <p className="font-mono text-xs tracking-widest text-accent uppercase">
-          &gt; ABOUT
+          &gt; {t("label")}
         </p>
         <h2 className="mt-2 font-[family-name:var(--font-kanit)] text-3xl font-semibold text-text-primary md:text-5xl">
-          Identity
+          {t("title")}
         </h2>
 
         <div className="mt-12 grid gap-12 md:grid-cols-5">
@@ -75,20 +77,13 @@ export default function AboutSection() {
               ref={bioRef}
               className="space-y-4 text-base leading-relaxed text-text-secondary"
             >
-              <p>
-                สวัสดีครับ ผม Apiwit — Frontend Developer ที่หลงใหลในการสร้าง
-                web experience ที่สวยงามและ interactive
-              </p>
-              <p>
-                ผมชอบผสมผสาน creative coding เข้ากับ modern frontend frameworks
-                เพื่อสร้างเว็บที่ไม่ใช่แค่ใช้งานได้ แต่ต้อง &quot;ว้าว&quot;
-                ด้วย
-              </p>
+              <p>{t("bio1")}</p>
+              <p>{t("bio2")}</p>
             </div>
 
             <div className="mt-8">
               <span className="font-mono text-xs tracking-widest text-text-dim">
-                TECH_STACK:
+                {t("techLabel")}
               </span>
               <div ref={tagsRef} className="mt-3 flex flex-wrap gap-2">
                 {TECH_STACK.map((tech) => (

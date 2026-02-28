@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
 import { Github, Linkedin, Mail } from "lucide-react";
 import CyberButton from "./CyberButton";
 import useScrollReveal from "@/hooks/useScrollReveal";
@@ -20,6 +21,7 @@ const SOCIALS = [
 ] as const;
 
 export default function ContactSection() {
+  const t = useTranslations("contact");
   const sectionRef = useRef<HTMLElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
   const [sending, setSending] = useState(false);
@@ -39,10 +41,10 @@ export default function ContactSection() {
     setSending(true);
     try {
       await new Promise((r) => setTimeout(r, 1500));
-      toast.success("Message sent successfully.");
+      toast.success(t("successToast"));
       reset();
     } catch {
-      toast.error("Transmission failed. Try again.");
+      toast.error(t("errorToast"));
     } finally {
       setSending(false);
     }
@@ -56,10 +58,10 @@ export default function ContactSection() {
     >
       <div className="mx-auto w-full max-w-4xl">
         <p className="font-mono text-xs tracking-widest text-accent uppercase">
-          &gt; CONTACT
+          &gt; {t("label")}
         </p>
         <h2 className="mt-2 font-[family-name:var(--font-kanit)] text-3xl font-semibold text-text-primary md:text-5xl">
-          Send Message
+          {t("title")}
         </h2>
 
         <form
@@ -68,35 +70,35 @@ export default function ContactSection() {
           className="mt-12 space-y-6"
         >
           <div className="form-row">
-            <label className="mb-1 block font-mono text-xs text-text-dim">&gt; name:</label>
+            <label className="mb-1 block font-mono text-xs text-text-dim">&gt; {t("nameLabel")}</label>
             <input
               {...register("name", { required: true })}
               className="w-full border-b border-white/10 bg-transparent py-3 text-text-primary caret-accent outline-none transition-colors focus:border-accent"
-              placeholder="John Doe"
+              placeholder={t("namePlaceholder")}
             />
-            {errors.name && <span className="mt-1 block font-mono text-xs text-accent">required</span>}
+            {errors.name && <span className="mt-1 block font-mono text-xs text-accent">{t("required")}</span>}
           </div>
 
           <div className="form-row">
-            <label className="mb-1 block font-mono text-xs text-text-dim">&gt; email:</label>
+            <label className="mb-1 block font-mono text-xs text-text-dim">&gt; {t("emailLabel")}</label>
             <input
               type="email"
               {...register("email", { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ })}
               className="w-full border-b border-white/10 bg-transparent py-3 text-text-primary caret-accent outline-none transition-colors focus:border-accent"
-              placeholder="john@example.com"
+              placeholder={t("emailPlaceholder")}
             />
-            {errors.email && <span className="mt-1 block font-mono text-xs text-accent">valid email required</span>}
+            {errors.email && <span className="mt-1 block font-mono text-xs text-accent">{t("emailInvalid")}</span>}
           </div>
 
           <div className="form-row">
-            <label className="mb-1 block font-mono text-xs text-text-dim">&gt; message:</label>
+            <label className="mb-1 block font-mono text-xs text-text-dim">&gt; {t("messageLabel")}</label>
             <textarea
               {...register("message", { required: true })}
               rows={4}
               className="w-full resize-none border-b border-white/10 bg-transparent py-3 text-text-primary caret-accent outline-none transition-colors focus:border-accent"
-              placeholder="Hello..."
+              placeholder={t("messagePlaceholder")}
             />
-            {errors.message && <span className="mt-1 block font-mono text-xs text-accent">required</span>}
+            {errors.message && <span className="mt-1 block font-mono text-xs text-accent">{t("required")}</span>}
           </div>
 
           <div className="form-row pt-2">
@@ -107,9 +109,9 @@ export default function ContactSection() {
               className="disabled:opacity-50"
             >
               {sending ? (
-                <span>SENDING<span className="animate-pulse">_</span></span>
+                <span>{t("sending")}<span className="animate-pulse">_</span></span>
               ) : (
-                "SEND_MESSAGE"
+                t("submit")
               )}
             </CyberButton>
           </div>

@@ -6,9 +6,13 @@ import CyberButton from "./CyberButton";
 
 interface ProjectCardProps {
   project: Project;
+  title: string;
+  description: string;
+  liveLabel: string;
+  codeLabel: string;
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project, title, description, liveLabel, codeLabel }: ProjectCardProps) {
   return (
     <div data-cursor="project" className="group relative border border-border-line bg-bg-secondary transition-all duration-300 hover:border-border-accent hover:shadow-[0_0_20px_var(--accent-glow)]">
       <Corner position="top-left" />
@@ -24,9 +28,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       <div className="p-5">
-        <h3 className="text-base font-semibold text-text-primary">{project.title}</h3>
+        <h3 className="text-base font-semibold text-text-primary">{title}</h3>
         <p className="mt-1.5 text-sm leading-relaxed text-text-secondary line-clamp-2">
-          {project.description}
+          {description}
         </p>
 
         <div className="mt-3 flex flex-wrap gap-1.5">
@@ -50,7 +54,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               rel="noopener noreferrer"
             >
               <ExternalLink size={12} strokeWidth={1.5} />
-              LIVE
+              {liveLabel}
             </CyberButton>
           )}
           {project.codeUrl && (
@@ -62,7 +66,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               rel="noopener noreferrer"
             >
               <Github size={12} strokeWidth={1.5} />
-              CODE
+              {codeLabel}
             </CyberButton>
           )}
         </div>

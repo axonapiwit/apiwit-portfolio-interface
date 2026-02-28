@@ -3,13 +3,10 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { clsx } from "clsx";
 import gsap from "gsap";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "./LanguageSwitcher";
 
-const NAV_ITEMS = [
-  { label: "ABOUT", href: "#about" },
-  { label: "PROJECTS", href: "#projects" },
-  { label: "EXPERIENCE", href: "#experience" },
-  { label: "CONTACT", href: "#contact" },
-] as const;
+const NAV_KEYS = ["about", "projects", "experience", "contact"] as const;
 
 const GLITCH_CHARS =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
@@ -19,6 +16,8 @@ interface NavbarProps {
 }
 
 export default function Navbar({ visible = true }: NavbarProps) {
+  const t = useTranslations("nav");
+  const navItems = NAV_KEYS.map((key) => ({ label: t(key), href: `#${key}` }));
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const menuOpen = useRef(false);
@@ -42,7 +41,7 @@ export default function Navbar({ visible = true }: NavbarProps) {
   }, []);
 
   useEffect(() => {
-    const sectionIds = NAV_ITEMS.map((i) => i.href.slice(1));
+    const sectionIds = NAV_KEYS.map((k) => k);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -187,11 +186,13 @@ export default function Navbar({ visible = true }: NavbarProps) {
           APIWIT.EXE
         </button>
 
-        <button
-          onClick={toggle}
-          className="relative z-60 flex h-8 w-8 flex-col items-center justify-center gap-1.5"
-          aria-label="Toggle menu"
-        >
+        <div className="flex items-center gap-3">
+          <LanguageSwitcher />
+          <button
+            onClick={toggle}
+            className="relative z-60 flex h-8 w-8 flex-col items-center justify-center gap-1.5"
+            aria-label="Toggle menu"
+          >
           <span
             className={clsx(
               "h-px w-5 bg-text-primary transition-all duration-300",
@@ -205,6 +206,7 @@ export default function Navbar({ visible = true }: NavbarProps) {
             )}
           />
         </button>
+        </div>
       </nav>
 
       {/* Modal — always in DOM, visibility toggled by GSAP */}
@@ -246,7 +248,7 @@ export default function Navbar({ visible = true }: NavbarProps) {
                 </svg>
               </button>
 
-              {NAV_ITEMS.map((item, i) => (
+              {navItems.map((item, i) => (
                 <button
                   key={item.href}
                   ref={(el) => {
