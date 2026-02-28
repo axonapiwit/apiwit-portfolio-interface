@@ -11,8 +11,8 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
-    id: "portfolio-v2",
-    title: "Portfolio V2",
+    id: "portfolio",
+    title: "Portfolio",
     description: "Personal portfolio with cyberpunk aesthetic, GSAP animations and boot screen sequence.",
     thumbnail: "/projects/portfolio.png",
     tags: ["Next.js", "GSAP", "Tailwind"],

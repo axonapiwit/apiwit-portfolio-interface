@@ -3,7 +3,8 @@
     "about": "ABOUT",
     "projects": "PROJECTS",
     "experience": "EXPERIENCE",
-    "contact": "CONTACT"
+    "contact": "CONTACT",
+    "resume": "RESUME"
   },
   "hero": {
     "subtitle": "Frontend Developer / Creative Coder",
@@ -23,8 +24,8 @@
     "live": "LIVE",
     "code": "CODE",
     "items": {
-      "portfolio-v2": {
-        "title": "Portfolio V2",
+      "portfolio": {
+        "title": "Portfolio",
         "description": "Personal portfolio with cyberpunk aesthetic, GSAP animations and boot screen sequence."
       },
       "ecommerce-dashboard": {

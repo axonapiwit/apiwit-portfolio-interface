@@ -4,7 +4,9 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { clsx } from "clsx";
 import gsap from "gsap";
 import { useTranslations } from "next-intl";
+import { Download } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher";
+import CyberButton from "./CyberButton";
 
 const NAV_KEYS = ["about", "projects", "experience", "contact"] as const;
 
@@ -187,25 +189,38 @@ export default function Navbar({ visible = true }: NavbarProps) {
         </button>
 
         <div className="flex items-center gap-3">
+          <CyberButton
+            variant="ghost"
+            size="sm"
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+            className="hidden md:inline-flex"
+            data-cursor="link"
+          >
+            <Download size={14} strokeWidth={1.5} />
+            {t("resume")}
+          </CyberButton>
           <LanguageSwitcher />
           <button
             onClick={toggle}
             className="relative z-60 flex h-8 w-8 flex-col items-center justify-center gap-1.5"
             aria-label="Toggle menu"
           >
-          <span
-            className={clsx(
-              "h-px w-5 bg-text-primary transition-all duration-300",
-              menuOpen.current && "translate-y-[3.5px] rotate-45",
-            )}
-          />
-          <span
-            className={clsx(
-              "h-px w-5 bg-text-primary transition-all duration-300",
-              menuOpen.current && "-translate-y-[3.5px] -rotate-45",
-            )}
-          />
-        </button>
+            <span
+              className={clsx(
+                "h-px w-5 bg-text-primary transition-all duration-300",
+                menuOpen.current && "translate-y-[3.5px] rotate-45",
+              )}
+            />
+            <span
+              className={clsx(
+                "h-px w-5 bg-text-primary transition-all duration-300",
+                menuOpen.current && "-translate-y-[3.5px] -rotate-45",
+              )}
+            />
+          </button>
         </div>
       </nav>
 
@@ -226,11 +241,6 @@ export default function Navbar({ visible = true }: NavbarProps) {
             className="cyber-clip pointer-events-auto relative w-72 bg-accent/20 p-px opacity-0 will-change-transform md:w-80"
           >
             <div className="cyber-clip relative flex flex-col gap-6 bg-bg-primary/97 px-8 py-10 md:px-10 md:py-12">
-              <span className="absolute top-3 left-3 h-4 w-4 border-t border-l border-accent/40" />
-              <span className="absolute top-3 right-3 h-4 w-4 border-t border-r border-accent/40" />
-              <span className="absolute bottom-3 left-3 h-4 w-4 border-b border-l border-accent/40" />
-              <span className="absolute bottom-3 right-3 h-4 w-4 border-b border-r border-accent/40" />
-
               <button
                 onClick={closeMenu}
                 className="absolute top-4 right-8 text-text-secondary transition-colors hover:text-accent"
@@ -267,6 +277,22 @@ export default function Navbar({ visible = true }: NavbarProps) {
                   <span>{item.label}</span>
                 </button>
               ))}
+
+              <div className="mt-2 flex border-t border-white/8 pt-6">
+                <CyberButton
+                  variant="primary"
+                  size="sm"
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                  className="flex-1 text-center [&>span]:justify-center"
+                  data-cursor="link"
+                >
+                  <Download size={14} strokeWidth={1.5} />
+                  {t("resume")}
+                </CyberButton>
+              </div>
             </div>
           </div>
         </div>
