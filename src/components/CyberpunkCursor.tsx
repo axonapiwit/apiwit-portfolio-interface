@@ -72,6 +72,8 @@ export default function CyberpunkCursor() {
     const outer = outerRef.current!;
     const dot = dotRef.current!;
 
+    gsap.set(outer, { xPercent: -50, yPercent: -50 });
+    gsap.set(dot, { xPercent: -50, yPercent: -50 });
     quickOuterX.current = gsap.quickTo(outer, "x", { duration: 0.35, ease: "power3.out" });
     quickOuterY.current = gsap.quickTo(outer, "y", { duration: 0.35, ease: "power3.out" });
 
@@ -123,7 +125,7 @@ export default function CyberpunkCursor() {
         <div
           key={i}
           ref={(el) => { if (el) trailRefs.current[i] = el; }}
-          className="absolute -left-[2px] -top-[2px] rounded-full bg-accent will-change-transform"
+          className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent will-change-transform"
           style={{
             width: `${4 - i * 0.5}px`,
             height: `${4 - i * 0.5}px`,
@@ -134,12 +136,12 @@ export default function CyberpunkCursor() {
       ))}
       <div
         ref={outerRef}
-        className="absolute -left-[18px] -top-[18px] h-9 w-9 rounded-full border border-accent/50 will-change-transform"
+        className="absolute left-0 top-0 h-9 w-9 rounded-full border border-accent/50 will-change-transform"
         style={{ transform: "translate3d(-100px, -100px, 0)" }}
       />
       <div
         ref={dotRef}
-        className="absolute -left-[3px] -top-[3px] h-1.5 w-1.5 rounded-full bg-accent will-change-transform"
+        className="absolute left-0 top-0 h-1.5 w-1.5 rounded-full bg-accent will-change-transform"
         style={{ transform: "translate3d(-100px, -100px, 0)" }}
       />
       <style>{`
