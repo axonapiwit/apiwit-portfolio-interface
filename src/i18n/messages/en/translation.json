@@ -14,8 +14,8 @@
   "about": {
     "label": "ABOUT",
     "title": "Identity",
-    "bio1": "Hi, I'm Apiwit — a Frontend Developer passionate about crafting beautiful and interactive web experiences.",
-    "bio2": "I love blending creative coding with modern frontend frameworks to build websites that don't just work — they wow.",
+    "bio1": "Hi there! I'm Apiwit (Aont) — a Frontend Developer at Maxion Tech, passionate about crafting beautiful and interactive web experiences.",
+    "bio2": "Graduated in Software Engineering from University of Phayao. I love blending creative coding with modern frontend frameworks to build websites that don't just work — they wow.",
     "techLabel": "TECH_STACK:"
   },
   "projects": {
@@ -57,19 +57,29 @@
     "statusCompleted": "COMPLETED",
     "items": {
       "exp-1": {
-        "role": "Senior Frontend Developer",
-        "company": "Tech Company",
-        "description": "Leading frontend architecture and building design system for enterprise products."
+        "role": "Frontend Developer",
+        "company": "Maxion Tech",
+        "description": "Full-time frontend developer based in Bangkok (Hybrid). Building modern web applications with cutting-edge frontend technologies."
       },
       "exp-2": {
         "role": "Frontend Developer",
-        "company": "Digital Agency",
-        "description": "Developed interactive web experiences and creative campaigns for global brands."
+        "company": "CIRCLE A CO., LTD.",
+        "description": "Full-time frontend developer in Chiang Mai. Developing UIs with modern frameworks, building custom components, responsive designs, and code review."
       },
       "exp-3": {
-        "role": "Junior Developer",
-        "company": "Startup Inc.",
-        "description": "Built responsive web applications and integrated REST APIs for SaaS platform."
+        "role": "Unity Developer",
+        "company": "KK VENTURE COMPANY LIMITED",
+        "description": "Implemented metaverse 3D game for Web 3.0."
+      },
+      "exp-4": {
+        "role": "Unity Developer (Internship)",
+        "company": "OneDee.ai",
+        "description": "Developed interactive applications using Unity during 6-month internship in Chiang Mai."
+      },
+      "exp-5": {
+        "role": "Frontend Developer (Internship)",
+        "company": "OneDee.ai",
+        "description": "Implemented web client during internship period."
       }
     }
   },
@@ -110,8 +120,8 @@
     "notFound": "Command not found: {cmd}. Type \"help\" for available commands.",
     "commands": {
       "help": "Available commands: help, about, skills, secret, clear, exit",
-      "about": "APIWIT.EXE v2.0 — Frontend Developer & Creative Coder\nBased in Thailand. Loves React, animations, and dark themes.",
-      "skills": "▓▓▓▓▓▓▓▓▓░ React 90%\n▓▓▓▓▓▓▓▓░░ TypeScript 80%\n▓▓▓▓▓▓▓▓▓░ Next.js 90%\n▓▓▓▓▓▓▓░░░ GSAP 70%\n▓▓▓▓▓▓▓▓░░ Tailwind 80%",
+      "about": "APIWIT.EXE v2.0 — Frontend Developer at Maxion Tech\nSoftware Engineering grad from University of Phayao. Based in Bangkok, Thailand.",
+      "skills": "▓▓▓▓▓▓▓▓▓░ React        90%\n▓▓▓▓▓▓▓▓░░ TypeScript   80%\n▓▓▓▓▓▓▓▓▓░ Next.js      90%\n▓▓▓▓▓▓▓▓░░ TailwindCSS  80%\n▓▓▓▓▓▓▓░░░ NestJS       70%\n▓▓▓▓▓▓░░░░ Firebase     60%",
       "secret": "Konami code detected... just kidding.\nBut hey, you found the terminal! +100 nerd points.",
       "sudo hire me": "ACCESS GRANTED. Sending resume to your inbox... ✓",
       "matrix": "Wake up, Neo... The Matrix has you.\nFollow the white rabbit.",

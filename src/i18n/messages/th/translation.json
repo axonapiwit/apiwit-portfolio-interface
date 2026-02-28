@@ -14,8 +14,8 @@
   "about": {
     "label": "เกี่ยวกับ",
     "title": "ตัวตน",
-    "bio1": "สวัสดีครับ ผม Apiwit — นักพัฒนา Frontend ที่หลงใหลในการสร้าง web experience ที่สวยงามและ interactive",
-    "bio2": "ผมชอบผสมผสาน creative coding เข้ากับ modern frontend frameworks เพื่อสร้างเว็บที่ไม่ใช่แค่ใช้งานได้ แต่ต้อง \"ว้าว\" ด้วย",
+    "bio1": "สวัสดีครับ ผม Apiwit (อ้น) — นักพัฒนา Frontend ที่ Maxion Tech หลงใหลในการสร้าง web experience ที่สวยงามและ interactive",
+    "bio2": "จบวิศวกรรมซอฟต์แวร์จากมหาวิทยาลัยพะเยา ผมชอบผสมผสาน creative coding เข้ากับ modern frontend frameworks เพื่อสร้างเว็บที่ไม่ใช่แค่ใช้งานได้ แต่ต้อง \"ว้าว\" ด้วย",
     "techLabel": "TECH_STACK:"
   },
   "projects": {
@@ -57,19 +57,29 @@
     "statusCompleted": "เสร็จสิ้น",
     "items": {
       "exp-1": {
-        "role": "Senior Frontend Developer",
-        "company": "Tech Company",
-        "description": "นำทีมสถาปัตยกรรม Frontend และสร้าง Design System สำหรับผลิตภัณฑ์ระดับองค์กร"
+        "role": "Frontend Developer",
+        "company": "Maxion Tech",
+        "description": "นักพัฒนา Frontend เต็มเวลา ประจำกรุงเทพฯ (Hybrid) พัฒนาเว็บแอปพลิเคชันด้วยเทคโนโลยี Frontend ล่าสุด"
       },
       "exp-2": {
         "role": "Frontend Developer",
-        "company": "Digital Agency",
-        "description": "พัฒนา web experience แบบ interactive และแคมเปญสร้างสรรค์ให้แบรนด์ระดับโลก"
+        "company": "CIRCLE A CO., LTD.",
+        "description": "นักพัฒนา Frontend เต็มเวลา ประจำเชียงใหม่ พัฒนา UI ด้วย framework สมัยใหม่ สร้าง custom components, responsive design และ code review"
       },
       "exp-3": {
-        "role": "Junior Developer",
-        "company": "Startup Inc.",
-        "description": "สร้างเว็บแอป responsive และเชื่อมต่อ REST API สำหรับแพลตฟอร์ม SaaS"
+        "role": "Unity Developer",
+        "company": "KK VENTURE COMPANY LIMITED",
+        "description": "พัฒนาเกม 3D Metaverse สำหรับ Web 3.0"
+      },
+      "exp-4": {
+        "role": "Unity Developer (ฝึกงาน)",
+        "company": "OneDee.ai",
+        "description": "พัฒนาแอปพลิเคชันแบบ interactive ด้วย Unity ฝึกงาน 6 เดือนที่เชียงใหม่"
+      },
+      "exp-5": {
+        "role": "Frontend Developer (ฝึกงาน)",
+        "company": "OneDee.ai",
+        "description": "พัฒนา web client ในช่วงฝึกงาน"
       }
     }
   },
@@ -110,8 +120,8 @@
     "notFound": "ไม่พบคำสั่ง: {cmd} พิมพ์ \"help\" เพื่อดูคำสั่งทั้งหมด",
     "commands": {
       "help": "คำสั่งที่ใช้ได้: help, about, skills, secret, clear, exit",
-      "about": "APIWIT.EXE v2.0 — นักพัฒนา Frontend & Creative Coder\nอยู่ประเทศไทย ชอบ React, แอนิเมชัน และ dark theme",
-      "skills": "▓▓▓▓▓▓▓▓▓░ React 90%\n▓▓▓▓▓▓▓▓░░ TypeScript 80%\n▓▓▓▓▓▓▓▓▓░ Next.js 90%\n▓▓▓▓▓▓▓░░░ GSAP 70%\n▓▓▓▓▓▓▓▓░░ Tailwind 80%",
+      "about": "APIWIT.EXE v2.0 — นักพัฒนา Frontend ที่ Maxion Tech\nจบวิศวกรรมซอฟต์แวร์จาก ม.พะเยา อยู่กรุงเทพฯ",
+      "skills": "▓▓▓▓▓▓▓▓▓░ React        90%\n▓▓▓▓▓▓▓▓░░ TypeScript   80%\n▓▓▓▓▓▓▓▓▓░ Next.js      90%\n▓▓▓▓▓▓▓▓░░ TailwindCSS  80%\n▓▓▓▓▓▓▓░░░ NestJS       70%\n▓▓▓▓▓▓░░░░ Firebase     60%",
       "secret": "ตรวจพบรหัส Konami... ล้อเล่น\nแต่เฮ้ คุณเจอเทอร์มินัลแล้ว! +100 คะแนน nerd",
       "sudo hire me": "อนุมัติการเข้าถึง กำลังส่ง resume ไปยังกล่องจดหมายของคุณ... ✓",
       "matrix": "ตื่นได้แล้ว Neo... The Matrix ตามหาคุณอยู่\nตามกระต่ายขาวไป",

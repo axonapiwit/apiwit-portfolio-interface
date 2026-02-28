@@ -7,20 +7,21 @@ import GlitchImage from "./GlitchImage";
 import useScrollReveal from "@/hooks/useScrollReveal";
 
 const TECH_STACK = [
+  "HTML & CSS",
   "TypeScript",
-  "JavaScript",
-  "HTML",
-  "CSS",
   "React",
   "Next.js",
-  "Vue",
-  "Tailwind CSS",
+  "TailwindCSS",
   "SCSS",
+  "MUI",
+  "Ant Design",
+  "ViteJS",
+  "NestJS",
+  "Firebase",
+  "Docker",
+  "Git",
   "GSAP",
   "Framer Motion",
-  "Git",
-  "Figma",
-  "VS Code",
 ];
 
 export default function AboutSection() {

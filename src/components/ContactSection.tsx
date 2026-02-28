@@ -17,7 +17,7 @@ interface FormData {
 const SOCIALS = [
   { label: "GITHUB", href: "https://github.com/axonapiwit", icon: Github },
   { label: "LINKEDIN", href: "https://linkedin.com/in/apiwit", icon: Linkedin },
-  { label: "EMAIL", href: "mailto:hello@apiwit.dev", icon: Mail },
+  { label: "EMAIL", href: "mailto:axon.apiwit@gmail.com", icon: Mail },
 ] as const;
 
 export default function ContactSection() {
