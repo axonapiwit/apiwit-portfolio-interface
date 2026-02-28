@@ -31,17 +31,24 @@ export default function HomeClient() {
           <CyberpunkCursor />
           <EasterEggTerminal />
           <SoundToggle />
-
-          <main className="animate-[fadeIn_0.6s_ease_forwards]">
-            <HeroSection active />
-            <AboutSection />
-            <ProjectsSection />
-            <ExperienceSection />
-            <ContactSection />
-            <Footer />
-          </main>
         </>
       )}
+
+      <main
+        className={
+          booted
+            ? "animate-[fadeIn_0.6s_ease_forwards]"
+            : "pointer-events-none invisible absolute"
+        }
+        aria-hidden={!booted}
+      >
+        <HeroSection active={booted} />
+          <AboutSection />
+          <ProjectsSection />
+          <ExperienceSection />
+          <ContactSection />
+        <Footer />
+      </main>
     </>
   );
 }

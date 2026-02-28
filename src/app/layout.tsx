@@ -18,15 +18,30 @@ const kanit = Kanit({
   variable: "--font-kanit",
 });
 
+const SITE_URL = "https://apiwit.xyz";
+const TITLE = "APIWIT.EXE — Frontend Developer";
+const DESCRIPTION =
+  "Portfolio of Apiwit — Frontend Developer & Creative Coder specializing in React, Next.js, and interactive web experiences.";
+
 export const metadata: Metadata = {
-  title: "APIWIT.EXE — Frontend Developer",
-  description: "Portfolio of Apiwit — Frontend Developer & Creative Coder",
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
   icons: "/logo.svg",
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "APIWIT.EXE — Frontend Developer",
-    description: "Portfolio of Apiwit — Frontend Developer & Creative Coder",
-    images: ["/logo.svg"],
+    type: "website",
+    url: SITE_URL,
+    title: TITLE,
+    description: DESCRIPTION,
+    siteName: "APIWIT.EXE",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
