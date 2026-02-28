@@ -80,7 +80,7 @@ export default function EasterEggTerminal() {
           </button>
         </div>
 
-        <div ref={scrollRef} className="h-64 overflow-y-auto p-4">
+        <div ref={scrollRef} className="cyber-scrollbar h-64 overflow-y-auto p-4">
           <div className="font-mono text-xs text-text-dim">
             Welcome to APIWIT.EXE terminal. Type &quot;help&quot; for commands.
           </div>

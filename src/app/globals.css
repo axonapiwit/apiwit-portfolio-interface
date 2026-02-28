@@ -50,6 +50,26 @@ html::-webkit-scrollbar {
   display: none;
 }
 
+.cyber-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-dim) transparent;
+}
+.cyber-scrollbar::-webkit-scrollbar {
+  display: block;
+  width: 6px;
+}
+.cyber-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.cyber-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--accent-dim);
+  border: none;
+}
+.cyber-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
