@@ -6,9 +6,7 @@ export const contentType = "image/png";
 
 export default async function Image() {
   const kanitBold = fetch(
-    new URL(
-      "https://fonts.gstatic.com/s/kanit/v15/nKKZ-Go6G5tXcraVGwCKd6xBDFs.woff",
-    ),
+    "https://github.com/google/fonts/raw/main/ofl/kanit/Kanit-Bold.ttf",
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
