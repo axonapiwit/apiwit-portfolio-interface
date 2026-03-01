@@ -69,7 +69,7 @@ export default function AboutSection() {
         <div className="mt-12 grid gap-12 md:grid-cols-5">
           <div ref={avatarRef} className="md:col-span-2">
             <HudFrame>
-              <GlitchImage src="/images/gf.webp" alt="Avatar" />
+              <GlitchImage src="/images/me.jpg" alt="Avatar" />
             </HudFrame>
           </div>
 

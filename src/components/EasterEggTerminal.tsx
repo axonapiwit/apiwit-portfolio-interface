@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { PROJECTS } from "@/data/projects";
+import { useSoundFX } from "@/hooks/useSoundFX";
 
 const COMMAND_NAMES = [
   "help", "about", "skills", "secret", "whoami", "resume",
@@ -75,6 +76,7 @@ const THEMES: Record<string, string> = {
 };
 
 export default function EasterEggTerminal() {
+  const play = useSoundFX();
   const [open, setOpen] = useState(false);
   const [history, setHistory] = useState<{ cmd: string; output: string }[]>([]);
   const [input, setInput] = useState("");
@@ -174,7 +176,10 @@ export default function EasterEggTerminal() {
       const val = input.trim().toLowerCase();
       if (!val) return;
       const match = COMMAND_NAMES.find((c) => c.startsWith(val));
-      if (match) setInput(match);
+      if (match) {
+        play("tab");
+        setInput(match);
+      }
       return;
     }
     // Command history ↑↓
@@ -205,6 +210,7 @@ export default function EasterEggTerminal() {
       {/* >_ hint button — bottom-left */}
       {!open && (
         <button
+          data-sound="click"
           onClick={() => { setOpen(true); setShowHint(false); }}
           className="fixed bottom-6 left-6 z-100 flex h-10 w-10 items-center justify-center border border-border-line bg-bg-primary/80 font-mono text-sm text-text-dim backdrop-blur-sm transition-all hover:border-border-accent hover:text-accent hover:shadow-[0_0_12px_var(--accent-glow)]"
           aria-label="Open terminal"
@@ -231,6 +237,7 @@ export default function EasterEggTerminal() {
                 APIWIT.EXE — Terminal
               </span>
               <button
+                data-sound="click"
                 onClick={() => setOpen(false)}
                 className="font-mono text-xs text-text-dim transition-colors hover:text-accent"
               >
@@ -259,6 +266,7 @@ export default function EasterEggTerminal() {
               onSubmit={(e) => {
                 e.preventDefault();
                 if (!input.trim()) return;
+                play("type");
                 runCommand(input);
                 setInput("");
               }}

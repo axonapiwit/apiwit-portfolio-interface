@@ -14,7 +14,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, title, description, liveLabel, codeLabel }: ProjectCardProps) {
   return (
-    <div data-cursor="project" className="group relative border border-border-line bg-bg-secondary transition-all duration-300 hover:border-border-accent hover:shadow-[0_0_20px_var(--accent-glow)]">
+    <div data-cursor="project" data-sound-hover className="group relative border border-border-line bg-bg-secondary transition-all duration-300 hover:border-border-accent hover:shadow-[0_0_20px_var(--accent-glow)]">
       <Corner position="top-left" />
       <Corner position="top-right" />
       <Corner position="bottom-left" />

@@ -34,6 +34,7 @@ export default function LanguageSwitcher() {
       {LOCALES.map(({ code, label }) => (
         <button
           key={code}
+          data-sound="click"
           onClick={() => switchLocale(code)}
           className={clsx(
             "px-2 py-1 transition-colors",

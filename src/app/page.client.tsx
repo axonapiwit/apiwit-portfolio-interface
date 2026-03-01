@@ -14,6 +14,7 @@ import NoiseOverlay from "@/components/NoiseOverlay";
 import CyberpunkCursor from "@/components/CyberpunkCursor";
 import EasterEggTerminal from "@/components/EasterEggTerminal";
 import SoundToggle from "@/components/SoundToggle";
+import SoundDelegate from "@/components/SoundDelegate";
 
 export default function HomeClient() {
   const [booted, setBooted] = useState(false);
@@ -25,6 +26,7 @@ export default function HomeClient() {
 
       {booted && (
         <>
+          <SoundDelegate />
           <BreakpointTransition />
           <Navbar visible />
           <NoiseOverlay />

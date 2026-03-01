@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { Github, Linkedin, Mail } from "lucide-react";
 import CyberButton from "./CyberButton";
 import useScrollReveal from "@/hooks/useScrollReveal";
+import { useSoundFX } from "@/hooks/useSoundFX";
 
 interface FormData {
   name: string;
@@ -22,6 +23,7 @@ const SOCIALS = [
 
 export default function ContactSection() {
   const t = useTranslations("contact");
+  const play = useSoundFX();
   const sectionRef = useRef<HTMLElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
   const [sending, setSending] = useState(false);
@@ -41,13 +43,19 @@ export default function ContactSection() {
     setSending(true);
     try {
       await new Promise((r) => setTimeout(r, 1500));
+      play("success");
       toast.success(t("successToast"));
       reset();
     } catch {
+      play("error");
       toast.error(t("errorToast"));
     } finally {
       setSending(false);
     }
+  };
+
+  const onError = () => {
+    play("error");
   };
 
   return (
@@ -66,7 +74,7 @@ export default function ContactSection() {
 
         <form
           ref={formRef}
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleSubmit(onSubmit, onError)}
           className="mt-12 space-y-6"
         >
           <div className="form-row">
@@ -124,6 +132,7 @@ export default function ContactSection() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
+              data-sound="click"
               className="flex items-center gap-2 font-mono text-sm text-text-secondary transition-colors hover:text-accent"
             >
               <Icon size={16} strokeWidth={1.5} />

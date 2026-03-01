@@ -182,6 +182,7 @@ export default function Navbar({ visible = true }: NavbarProps) {
         )}
       >
         <button
+          data-sound="click"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="font-sans text-base font-semibold tracking-wider text-text-primary uppercase transition-colors hover:text-accent"
         >
@@ -204,6 +205,7 @@ export default function Navbar({ visible = true }: NavbarProps) {
           </CyberButton>
           <LanguageSwitcher />
           <button
+            data-sound="click"
             onClick={toggle}
             className="relative z-60 flex h-8 w-8 flex-col items-center justify-center gap-1.5"
             aria-label="Toggle menu"
@@ -231,6 +233,7 @@ export default function Navbar({ visible = true }: NavbarProps) {
       >
         <div
           ref={backdropRef}
+          data-sound="click"
           className="absolute inset-0 bg-black/70 opacity-0 backdrop-blur-sm"
           onClick={closeMenu}
         />
@@ -242,6 +245,7 @@ export default function Navbar({ visible = true }: NavbarProps) {
           >
             <div className="cyber-clip relative flex flex-col gap-6 bg-bg-primary/97 px-8 py-10 md:px-10 md:py-12">
               <button
+                data-sound="click"
                 onClick={closeMenu}
                 className="absolute top-4 right-8 text-text-secondary transition-colors hover:text-accent"
                 aria-label="Close menu"
@@ -265,6 +269,7 @@ export default function Navbar({ visible = true }: NavbarProps) {
                     itemsRef.current[i] = el;
                   }}
                   data-label={item.label}
+                  data-sound="click"
                   onClick={() => scrollTo(item.href)}
                   className={clsx(
                     "text-left font-sans text-lg font-medium tracking-wide uppercase transition-colors md:text-xl",

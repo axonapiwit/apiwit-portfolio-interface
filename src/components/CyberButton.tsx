@@ -53,6 +53,8 @@ export default function CyberButton({
 
   return (
     <Tag
+      data-sound="click"
+      data-sound-hover
       className={`${clip} group relative p-px transition-all duration-300 ${OUTER[variant]} ${className}`}
       {...(rest as Record<string, unknown>)}
     >
