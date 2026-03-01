@@ -5,6 +5,7 @@ import GlitchText from "./GlitchText";
 import Marquee from "./Marquee";
 import ScrollIndicator from "./ScrollIndicator";
 import CyberpunkBackground from "./CyberpunkBackground";
+import HeroVideoBackground from "./HeroVideoBackground";
 import CyberButton from "./CyberButton";
 
 interface HeroSectionProps {
@@ -19,6 +20,7 @@ export default function HeroSection({ active = true }: HeroSectionProps) {
       id="hero"
       className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-bg-primary px-6 md:px-12 lg:px-24"
     >
+      <HeroVideoBackground />
       <CyberpunkBackground />
 
       <div className="relative z-10 flex flex-col items-center gap-4 text-center md:items-start md:text-left">
